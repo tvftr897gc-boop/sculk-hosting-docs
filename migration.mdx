@@ -1,0 +1,23 @@
+---
+title: "Import from another host"
+description: "Transfer server files over SFTP or FTP."
+---
+
+Open **Import** on the destination server. The import tool reads files from your previous host and writes them to this server. It stops the destination server and can overwrite files with the same names.
+
+<Steps>
+  <Step title="Protect the destination">
+    Make a [backup](/backups) of any files already on the Sculk server that you need to keep.
+  </Step>
+  <Step title="Enter the source connection">
+    Enter the old host, port, transfer mode, username, and password. You can enter a server for one import without saving a profile. The panel says the password for this import is not stored.
+  </Step>
+  <Step title="Choose paths">
+    Set **Source** to the folder on the old host and **Destination** to the folder here. The default `/` means the root of each server's files.
+  </Step>
+  <Step title="Test and import">
+    Select **Test the connection**. Review the overwrite option, then select **Start the import**. Wait for the transfer to finish before starting the server.
+  </Step>
+</Steps>
+
+After the import, check **Startup**, **Version**, and **Console**. The old host's game files may require a different Java version, server software, or startup setting. If the previous host does not provide SFTP or FTP access, use [Files and SFTP](/files-and-sftp) to upload an archive or files manually.
